@@ -28,17 +28,7 @@ public class Test : MonoBehaviour
             lastBoss.Magic();
             if (!lastBoss.isMagicAvalable) break;
         }
-        
-
-
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-
 }
 
 public class Boss
@@ -57,8 +47,7 @@ public class Boss
         else
         {
             this.isMagicAvalable = false;
-            Debug.Log("MPが足りないため、魔法が使えない");
+            Debug.Log("MPが足りないため、魔法が使えない。");
         }
     }
-
 }
