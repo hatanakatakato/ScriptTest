@@ -9,12 +9,14 @@ public class Test : MonoBehaviour
     {
         //配列の宣言と初期化
         int[] array = {2,3,5,7,11};
+        Debug.Log("順番に表示");
         //順番に表示
         for (int i = 0; i < array.Length; i++)
         {
             Debug.Log(array[i]);
         }
         //逆順に表示
+        Debug.Log("逆順に表示");
         for (int i = array.Length - 1; i >= 0; i--)
         {
             Debug.Log(array[i]);
@@ -22,12 +24,14 @@ public class Test : MonoBehaviour
 
         //Bossクラスをインスタンス化
         Boss lastBoss = new Boss();
-        //mpがあるかぎり攻撃する
-        while (true)
+        //10回攻撃する
+        for(int i = 0;i < 10; i++)
         {
             lastBoss.Magic();
-            if (!lastBoss.isMagicAvalable) break;
         }
+        //その後一回攻撃
+        lastBoss.Magic();
+
     }
 }
 
